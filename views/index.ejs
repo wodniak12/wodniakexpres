@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student</title>
+</head>
+<body>
+    <form action="/quotes" method="POST">
+        <input type="number" placeholder="album" name="album">
+        <input type="text" placeholder="imie" name="imie">
+        <input type="text" placeholder="nazwisko" name="nazwisko">
+        <button type="submit">zatwierdz</button>
+      </form>
+
+
+
+      <table>
+          <tr>
+        <th>Album</th>
+        <th>Imie</th>
+        <th>nazwisko</th>
+            </tr>
+            <% for(var i = 0; i < quotes.length; i++) {%>
+                <tr>
+                    <th><%= quotes[i].album %></th>
+                    <th><%= quotes[i].imie %></th>
+                    <th><%= quotes[i].nazwisko %></th>
+
+
+                </tr>
+                <% } %>
+
+      </table>
+
+
+
+      <div>
+        <h2>Remove Darth Vadar!</h2>
+        <p>
+          Delete one Darth Vadar's quote. Does nothing if there are no more Darth
+          Vadar's quote
+        </p>
+        <button id="delete-button">Delete Darth Vadar's quote</button>
+      </div>
+      <div>
+        <h2>Darth Vadar invades!</h2>
+        <p>
+          Replace first Yoda's quote with a quote written by Darth Vadar
+        </p>
+        <button id="update-button">Replace Yoda's quote</button>
+      </div>
+       <!-- ... -->
+  <script src="/main.js"></script>
+</body>
+</html>
